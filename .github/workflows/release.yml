@@ -7,7 +7,7 @@ on:
 
 jobs:
   create-release:
-    if: github.event.pull_request.merged == true && contains(github.event.pull_request.labels.*.name, 'update-diagram')
+    if: github.event.pull_request.merged == true && contains(github.event.pull_request.head.ref, 'update-diagram')
     runs-on: ubuntu-latest
 
     steps:
